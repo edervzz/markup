@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mercury/presentation/home/home_screen.dart';
+import 'package:mercury/container_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,9 +18,9 @@ class MainApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         useMaterial3: true,
-        fontFamily: "Comfortaa",
+        fontFamily: "Calibri",
       ),
-      home: const HomeScreen(),
+      home: const ContainerScreen(),
     );
   }
 }

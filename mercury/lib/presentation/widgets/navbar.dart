@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../constants/constants.dart';
+
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
 
@@ -16,21 +18,15 @@ class _NavBar extends State<NavBar> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          UserAccountsDrawerHeader(
-            accountName: Text(
-              AppLocalizations.of(context)!.greeting,
+          Padding(
+            padding: const EdgeInsets.only(top: 60, left: 20),
+            child: Text(
+              AppLocalizations.of(context)!.menu,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: mainColor,
               ),
-            ),
-            accountEmail: null,
-            currentAccountPicture: Image.asset(
-              'assets/images/logo_white_markup.png',
-              fit: BoxFit.fitHeight,
-              height: 40,
-            ),
-            decoration: const BoxDecoration(
-              color: Color(0xFF234099),
             ),
           ),
           ListTile(

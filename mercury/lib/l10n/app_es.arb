@@ -1,10 +1,17 @@
 {
     "helloWorld": "¡Hola Mundo!",
+    "menu": "Menú",
     "greeting": "Bienvenido",
     "home": "Inicio",
     "aboutUs": "Nosotros",
-    "projects": "Proyectos",
+    "buy": "Comprar",
+    "rent": "Rentar",
+    "projects": "Desarrollos",
     "offices": "Oficinas",
     "lands": "Terrenos",
-    "preOwned": "Seminuevos"
+    "preOwned": "Seminuevos",
+    "search": "Search",
+    "favorite": "Favorite",
+    "contact": "Contact Us",
+    "search_header": "¿QUÉ ESTÁS BUSCANDO?"
 }

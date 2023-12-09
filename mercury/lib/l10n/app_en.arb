@@ -3,11 +3,18 @@
   "@helloWorld": {
     "description": "The conventional newborn programmer greeting"
   },
+  "menu": "Menu",
   "greeting": "Welcome",
   "home": "Home",
   "aboutUs": "About Us",
+  "buy": "Buy",
+  "rent": "Rent",
   "projects": "Projects",
   "offices": "Offices",
-  "lands": "Lands",
-  "preOwned": "Pre-Owned"
+  "lands": "Properties",
+  "preOwned": "Pre-Owned",
+  "search": "Search",
+  "favorite": "Favorite",
+  "contact": "Contact Us",
+  "search_header": "WHAT ARE YOU LOOKING FOR?"
 }
