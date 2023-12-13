@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../constants/constants.dart';
+import '../constants.dart';
 
-class NavBar extends StatefulWidget {
-  const NavBar({super.key});
+class NavBarWidget extends StatefulWidget {
+  const NavBarWidget({super.key});
 
   @override
-  State<StatefulWidget> createState() => _NavBar();
+  State<StatefulWidget> createState() => _NavBarState();
 }
 
-class _NavBar extends State<NavBar> {
+class _NavBarState extends State<NavBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Drawer(

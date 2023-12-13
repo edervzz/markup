@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:animated_button_bar/animated_button_bar.dart';
-import 'package:mercury/constants/constants.dart';
-import 'package:mercury/presentation/widgets/search_filters.dart';
+import 'package:mercury/constants.dart';
+import 'package:mercury/widgets/search_filters_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

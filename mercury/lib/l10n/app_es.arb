@@ -13,5 +13,12 @@
     "search": "Search",
     "favorite": "Favorite",
     "contact": "Contact Us",
-    "search_header": "¿QUÉ ESTÁS BUSCANDO?"
+    "search_header": "¿QUÉ ESTÁS BUSCANDO?",
+    "rooms": "Habitaciones",
+    "bathrooms": "Baños",
+    "levels": "Niveles",
+    "mt2": "Mt2",
+    "text01": "¡La casa de tus \n sueños a un paso!",
+    "callus": "Llámanos",
+    "mailus": "Envía un email"
 }

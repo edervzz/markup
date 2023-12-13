@@ -16,5 +16,12 @@
   "search": "Search",
   "favorite": "Favorite",
   "contact": "Contact Us",
-  "search_header": "WHAT ARE YOU LOOKING FOR?"
+  "search_header": "WHAT ARE YOU LOOKING FOR?",
+  "rooms": "Roms",
+  "bathrooms": "Bathrooms",
+  "levels": "Levels",
+  "mt2": "Mt2",
+  "text01": "The house of your dreams \n just one step away!",
+  "callus": "Call Us",
+  "mailus": "Send an email"
 }

@@ -1,7 +1,7 @@
 import 'package:animated_button_bar/animated_button_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mercury/constants/constants.dart';
+import 'package:mercury/constants.dart';
 
 class SearchFilter extends StatefulWidget {
   const SearchFilter({super.key});
