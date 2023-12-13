@@ -1,4 +1,5 @@
 class Property {
+  final int id;
   final String type;
   final int rooms;
   final int bathrooms;
@@ -10,6 +11,7 @@ class Property {
   final bool isFavorite;
 
   Property({
+    required this.id,
     String type = "buy",
     required this.rooms,
     required this.bathrooms,

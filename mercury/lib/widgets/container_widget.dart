@@ -14,6 +14,7 @@ class ContainerWidget extends StatefulWidget {
     properties = List.empty(growable: true);
     properties.add(
       Property(
+          id: 1,
           type: "buy",
           rooms: 1,
           mt2: 400,
@@ -26,6 +27,7 @@ class ContainerWidget extends StatefulWidget {
     );
     properties.add(
       Property(
+          id: 1,
           type: "rent",
           rooms: 2,
           bathrooms: 1,
@@ -53,6 +55,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
     properties = List.empty(growable: true);
     properties.add(
       Property(
+          id: 1,
           type: "buy",
           rooms: 1,
           mt2: 400,
@@ -65,6 +68,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
     );
     properties.add(
       Property(
+          id: 2,
           type: "buy",
           rooms: 1,
           mt2: 400,
@@ -77,6 +81,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
     );
     properties.add(
       Property(
+          id: 3,
           type: "rent",
           rooms: 2,
           bathrooms: 1,

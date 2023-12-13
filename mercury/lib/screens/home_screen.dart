@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mercury/entities/property.dart';
-import 'package:mercury/widgets/contact_widget.dart';
-import 'package:mercury/widgets/properties_widget.dart';
+
+import '../entities/_entities.dart';
+import '../widgets/_widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   final List<Property>? properties;
