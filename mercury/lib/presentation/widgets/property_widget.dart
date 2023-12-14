@@ -29,7 +29,7 @@ class _PropertyWidgetState extends State<PropertyWidget> {
           Stack(
             alignment: AlignmentDirectional.bottomStart,
             children: [
-              Image.asset("assets/images/background.jpg", fit: BoxFit.fill),
+              Image.network(widget.property.imageUrl, fit: BoxFit.cover),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

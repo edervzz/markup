@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:mercury/adapters/data_store.dart';
 import 'package:mercury/presentation/widgets/_widgets.dart';
+import 'package:mercury/repository/repository.dart';
 
 const mainColor = Color(0xFF4966F2);
 const activeColor = Color(0xFF49F2A3);
 const pasiveColor = Color.fromARGB(255, 106, 106, 106);
 
+Repository? dataStore;
+
 void main() {
+  // aqui podemos elegir el repositorio real o uno de prueba (stub)
+  dataStore = DataStoreStub();
   runApp(const MainApp());
 }
 
