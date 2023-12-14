@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mercury/entities/_entities.dart';
-import 'package:mercury/repository/repository.dart';
+import 'package:mercury/domain/entities/_entities.dart';
+import 'package:mercury/domain/repository/repository.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(Repository repository) : super(HomeState.initial()) {

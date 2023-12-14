@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:mercury/constants.dart';
-import 'package:mercury/entities/_entities.dart';
+import 'package:mercury/domain/entities/_entities.dart';
 
 class PropertyWidget extends StatefulWidget {
   final Property property;

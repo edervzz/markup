@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mercury/domain/repository/repository.dart';
 import 'package:mercury/main.dart';
 import 'package:mercury/presentation/home/home_bloc.dart';
 import 'package:mercury/presentation/widgets/_widgets.dart';
-import 'package:mercury/repository/repository.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

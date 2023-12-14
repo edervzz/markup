@@ -1,4 +1,4 @@
-import 'package:mercury/repository/property_repository.dart';
+import 'package:mercury/domain/repository/property_repository.dart';
 
 abstract class Repository {
   PropertyRepository property;

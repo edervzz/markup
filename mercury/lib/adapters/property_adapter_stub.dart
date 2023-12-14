@@ -1,5 +1,5 @@
-import 'package:mercury/entities/property.dart';
-import 'package:mercury/repository/property_repository.dart';
+import 'package:mercury/domain/entities/_entities.dart';
+import 'package:mercury/domain/repository/property_repository.dart';
 
 class PropertyAdapterStub implements PropertyRepository {
   @override
