@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:mercury/constants.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mercury/domain/entities/_entities.dart';
-import 'package:mercury/presentation/home/home_screen.dart';
-import 'package:mercury/presentation/search/search_screen.dart';
+import 'package:mercury/presentation/views/favorites/favorites_view.dart';
+import 'package:mercury/presentation/views/home/home_view.dart';
+import 'package:mercury/presentation/views/search/search_view.dart';
 import 'package:mercury/presentation/widgets/_widgets.dart';
 
-class ContainerWidget extends StatefulWidget {
+class ContainerScreen extends StatefulWidget {
   static String name = 'home-screen';
 
+  const ContainerScreen({super.key});
+
   @override
-  State<ContainerWidget> createState() => _ContainerWidgetState();
+  State<ContainerScreen> createState() => _ContainerScreenState();
 }
 
-class _ContainerWidgetState extends State<ContainerWidget> {
+class _ContainerScreenState extends State<ContainerScreen> {
   int screenIndex = 0;
 
   List<Widget> screens = List.empty(growable: true);
@@ -21,9 +24,9 @@ class _ContainerWidgetState extends State<ContainerWidget> {
 
   @override
   Widget build(BuildContext context) {
-    screens.add(const HomeScreen());
-    screens.add(const SearchScreen());
-    screens.add(const SearchScreen());
+    screens.add(const HomeView());
+    screens.add(const SearchView());
+    screens.add(const FavoriteView());
 
     final navButtons = [
       BottomNavigationBarItem(

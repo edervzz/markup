@@ -47,13 +47,20 @@ class _PropertyWidgetState extends State<PropertyWidget> {
                     ),
                   ),
                   CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: Icon(
-                        widget.property.isFavorite
-                            ? Icons.favorite
-                            : Icons.favorite_border,
-                        color: mainColor),
-                  ),
+                    backgroundColor: cleanColor,
+                    child: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            widget.property.isFavorite =
+                                widget.property.isFavorite ? false : true;
+                          });
+                        },
+                        icon: Icon(
+                            widget.property.isFavorite
+                                ? Icons.favorite
+                                : Icons.favorite_border,
+                            color: mainColor)),
+                  )
                 ],
               ),
             ],

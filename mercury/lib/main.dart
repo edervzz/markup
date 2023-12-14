@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mercury/data/stub/data_store_stub.dart';
 import 'package:mercury/domain/repository/repository.dart';
-import 'package:mercury/presentation/widgets/_widgets.dart';
+import 'package:mercury/presentation/container/container_screen.dart';
 
 const mainColor = Color(0xFF4966F2);
 const activeColor = Color(0xFF49F2A3);
@@ -32,7 +32,7 @@ class MainApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: "Calibri",
       ),
-      home: ContainerWidget(),
+      home: ContainerScreen(),
     );
   }
 }

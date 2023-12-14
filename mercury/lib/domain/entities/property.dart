@@ -9,7 +9,7 @@ class Property {
   final String location;
   final double price;
   final String imageUrl;
-  final bool isFavorite;
+  bool isFavorite;
 
   Property({
     required this.id,

@@ -38,7 +38,7 @@ class PropertyAdapterStub implements PropertyRepository {
           propertyName: "Alamo",
           price: 2000001,
           imageUrl:
-              "https://images1.forrent.com/i2/YznUbu6Uswkod01DqFTaN_Ciz0GH4UFeuzZErcl544E/117/image.jpg",
+              "https://cf.bstatic.com/xdata/images/hotel/max1024x768/330993383.jpg?k=931a8b3286d533d1bb984218304d85029f464ab79e0bb25083e25d6fe1d8b340&o=&hp=1",
           isFavorite: true),
     );
     properties.add(
