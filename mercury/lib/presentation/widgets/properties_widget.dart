@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:mercury/entities/property.dart';
-import 'package:mercury/widgets/property_widget.dart';
+import 'package:mercury/presentation/widgets/_widgets.dart';
 
 class PropertiesWidget extends StatefulWidget {
   final List<Property>? properties;

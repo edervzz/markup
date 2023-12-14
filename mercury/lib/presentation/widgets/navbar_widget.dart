@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-import '../constants.dart';
+import 'package:mercury/constants.dart';
 
 class NavBarWidget extends StatefulWidget {
   const NavBarWidget({super.key});

@@ -8,6 +8,7 @@ class Property {
   final String propertyName;
   final String location;
   final double price;
+  final String imageUrl;
   final bool isFavorite;
 
   Property({
@@ -20,6 +21,7 @@ class Property {
     required this.propertyName,
     required this.location,
     required this.price,
+    required this.imageUrl,
     required this.isFavorite,
   }) : type = type.toUpperCase();
 }

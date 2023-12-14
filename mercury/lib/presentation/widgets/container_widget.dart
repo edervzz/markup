@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mercury/constants.dart';
 import 'package:mercury/entities/property.dart';
-import 'package:mercury/screens/favorites_screen.dart';
-import 'package:mercury/screens/home_screen.dart';
-import 'package:mercury/screens/search_screen.dart';
-import 'package:mercury/widgets/navbar_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:mercury/presentation/screens/_screens.dart';
+import 'package:mercury/presentation/widgets/_widgets.dart';
 
 class ContainerWidget extends StatefulWidget {
   static String name = 'home-screen';
@@ -23,6 +21,7 @@ class ContainerWidget extends StatefulWidget {
           price: 2000001,
           propertyName: "Alamo",
           bathrooms: 3,
+          imageUrl: "",
           isFavorite: true),
     );
     properties.add(
@@ -36,6 +35,7 @@ class ContainerWidget extends StatefulWidget {
           location: "Bonfil",
           price: 8003,
           propertyName: "Av 16 de Septiembre",
+          imageUrl: "",
           isFavorite: false),
     );
   }
@@ -64,6 +64,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
           price: 2000001,
           propertyName: "Alamo",
           bathrooms: 3,
+          imageUrl: "",
           isFavorite: true),
     );
     properties.add(
@@ -77,6 +78,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
           price: 2000001,
           propertyName: "ZXCV",
           bathrooms: 3,
+          imageUrl: "",
           isFavorite: true),
     );
     properties.add(
@@ -90,6 +92,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
           location: "Bonfil",
           price: 8003,
           propertyName: "Av 16 de Septiembre",
+          imageUrl: "",
           isFavorite: false),
     );
     screens.add(HomeScreen(

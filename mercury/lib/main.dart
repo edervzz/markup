@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mercury/widgets/container_widget.dart';
+import 'package:mercury/presentation/widgets/_widgets.dart';
 
 const mainColor = Color(0xFF4966F2);
 const activeColor = Color(0xFF49F2A3);
