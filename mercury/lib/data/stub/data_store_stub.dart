@@ -1,4 +1,4 @@
-import 'package:mercury/adapters/_adapters.dart';
+import 'package:mercury/data/stub/property_adapter_stub.dart';
 import 'package:mercury/domain/repository/property_repository.dart';
 import 'package:mercury/domain/repository/repository.dart';
 
