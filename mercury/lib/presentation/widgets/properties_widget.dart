@@ -4,8 +4,9 @@ import 'package:mercury/presentation/widgets/_widgets.dart';
 
 class PropertiesWidget extends StatefulWidget {
   final List<Property>? properties;
+  final PriceFor? priceFor;
 
-  const PropertiesWidget({super.key, required this.properties});
+  const PropertiesWidget({super.key, required this.properties, this.priceFor});
 
   @override
   State<StatefulWidget> createState() => PropertiesWidgetState();
@@ -17,7 +18,13 @@ class PropertiesWidgetState extends State<PropertiesWidget> {
     List<Widget> props = List.empty(growable: true);
     if (widget.properties != null) {
       for (var element in widget.properties!) {
-        props.add(PropertyWidget(property: element));
+        if (widget.priceFor != null) {
+          if (element.priceFor == widget.priceFor) {
+            props.add(PropertyWidget(property: element));
+          }
+        } else {
+          props.add(PropertyWidget(property: element));
+        }
       }
     }
 

@@ -1,13 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mercury/data/stub/data_store_stub.dart';
 import 'package:mercury/domain/repository/repository.dart';
 import 'package:mercury/presentation/container/container_screen.dart';
-
-const mainColor = Color(0xFF4966F2);
-const activeColor = Color(0xFF49F2A3);
-const pasiveColor = Color.fromARGB(255, 106, 106, 106);
 
 Repository? dataStore;
 
@@ -24,15 +21,15 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: !kDebugMode,
       checkerboardOffscreenLayers: true,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         useMaterial3: true,
-        fontFamily: "Calibri",
+        fontFamily: "Roboto",
       ),
-      home: ContainerScreen(),
+      home: const ContainerScreen(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mercury/constants.dart';
+import 'package:mercury/shared/constants.dart';
 
 class NavBarWidget extends StatefulWidget {
   const NavBarWidget({super.key});
@@ -24,7 +24,7 @@ class _NavBarState extends State<NavBarWidget> {
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                color: mainColor,
+                color: globalColorMain,
               ),
             ),
           ),

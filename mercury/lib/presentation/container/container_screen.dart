@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mercury/constants.dart';
+import 'package:mercury/shared/constants.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mercury/domain/entities/_entities.dart';
 import 'package:mercury/presentation/views/favorites/favorites_view.dart';
@@ -31,26 +31,26 @@ class _ContainerScreenState extends State<ContainerScreen> {
     final navButtons = [
       BottomNavigationBarItem(
         icon: const Icon(Icons.home_outlined),
-        activeIcon: const Icon(Icons.home, color: mainColor),
+        activeIcon: const Icon(Icons.home, color: globalColorMain),
         label: AppLocalizations.of(context)!.home,
       ),
       BottomNavigationBarItem(
         icon: const Icon(Icons.search_outlined),
-        activeIcon: const Icon(Icons.search, color: mainColor),
+        activeIcon: const Icon(Icons.search, color: globalColorMain),
         label: AppLocalizations.of(context)!.search,
       ),
       BottomNavigationBarItem(
         icon: const Icon(Icons.favorite_outline),
-        activeIcon: const Icon(Icons.favorite, color: mainColor),
+        activeIcon: const Icon(Icons.favorite, color: globalColorMain),
         label: AppLocalizations.of(context)!.favorite,
       ),
     ];
 
     return Scaffold(
-      endDrawer: const NavBarWidget(),
+      // endDrawer: const NavBarWidget(),
       appBar: AppBar(
           foregroundColor: Colors.white,
-          backgroundColor: mainColor, //234099
+          backgroundColor: globalColorMain, //234099
           centerTitle: true,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.start,

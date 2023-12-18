@@ -1,4 +1,6 @@
-import 'package:mercury/abstractions/_abstractions.dart';
+import 'package:mercury/shared/_shared.dart';
 import 'package:mercury/domain/entities/_entities.dart';
 
-abstract class PropertyRepository implements ReadRepository<Property, String> {}
+abstract class PropertyRepository implements ReadRepository<Property, String> {
+  Future<List<Property>?> readFavorites();
+}

@@ -1,16 +1,16 @@
 import 'package:animated_button_bar/animated_button_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mercury/constants.dart';
+import 'package:mercury/shared/constants.dart';
 
-class SearchFilter extends StatefulWidget {
-  const SearchFilter({super.key});
+class SearchFilterWidget extends StatefulWidget {
+  const SearchFilterWidget({super.key});
 
   @override
-  State<StatefulWidget> createState() => _SearchScreenState();
+  State<StatefulWidget> createState() => _SearchFilterWidgetState();
 }
 
-class _SearchScreenState extends State<SearchFilter> {
+class _SearchFilterWidgetState extends State<SearchFilterWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +21,7 @@ class _SearchScreenState extends State<SearchFilter> {
             AnimatedButtonBar(
               radius: 10.0,
               backgroundColor: Colors.white,
-              foregroundColor: pasiveColor,
+              foregroundColor: globalColorPasive,
               elevation: 0,
               padding: const EdgeInsets.all(6.0),
               animationDuration: const Duration(milliseconds: 400),
@@ -32,13 +32,13 @@ class _SearchScreenState extends State<SearchFilter> {
                     child: Text(AppLocalizations.of(context)!.buy)),
                 ButtonBarEntry(
                     onTap: () => {},
-                    child: Text(AppLocalizations.of(context)!.offices)),
+                    child: Text(AppLocalizations.of(context)!.projects)),
                 ButtonBarEntry(
                     onTap: () => {},
                     child: Text(AppLocalizations.of(context)!.lands)),
                 ButtonBarEntry(
                     onTap: () => {},
-                    child: Text(AppLocalizations.of(context)!.preOwned))
+                    child: Text(AppLocalizations.of(context)!.rent))
               ],
             ),
           ],

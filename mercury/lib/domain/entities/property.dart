@@ -1,6 +1,7 @@
 class Property {
   final int id;
-  final String type;
+  final PriceFor priceFor;
+  final PropKind kind;
   final int rooms;
   final int bathrooms;
   final int levels;
@@ -13,7 +14,8 @@ class Property {
 
   Property({
     required this.id,
-    String type = "buy",
+    required this.priceFor,
+    required this.kind,
     required this.rooms,
     required this.bathrooms,
     required this.levels,
@@ -23,5 +25,17 @@ class Property {
     required this.price,
     required this.imageUrl,
     required this.isFavorite,
-  }) : type = type.toUpperCase();
+  });
+}
+
+enum PropKind {
+  project,
+  office,
+  estate,
+  preOwned,
+}
+
+enum PriceFor {
+  forRent,
+  forBuy,
 }

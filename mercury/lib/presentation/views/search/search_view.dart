@@ -20,7 +20,7 @@ class _SearchViewState extends State<SearchView> {
                     image: NetworkImage(
                         "https://www.anyplace.com/home/thumbnail.jpg"),
                     fit: BoxFit.cover)),
-            child: const SearchFilter(),
+            child: const SearchFilterWidget(),
           ),
         ],
       ),

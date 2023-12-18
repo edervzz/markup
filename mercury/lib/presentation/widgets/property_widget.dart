@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
-import 'package:mercury/constants.dart';
+import 'package:mercury/shared/constants.dart';
+import 'package:mercury/data/shared_pref_keys.dart';
 import 'package:mercury/domain/entities/_entities.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class PropertyWidget extends StatefulWidget {
   final Property property;
@@ -34,32 +36,68 @@ class _PropertyWidgetState extends State<PropertyWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    color: alertColor,
+                    color: globalColorAlert,
                     padding:
                         const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     child: Text(
-                      widget.property.type,
+                      (widget.property.priceFor == PriceFor.forBuy
+                              ? AppLocalizations.of(context)!.buy
+                              : AppLocalizations.of(context)!.rent)
+                          .toUpperCase(),
                       style: const TextStyle(
                         color: Colors.white,
+                        fontWeight: FontWeight.bold,
                         fontSize: 25,
                         letterSpacing: 3,
                       ),
                     ),
                   ),
                   CircleAvatar(
-                    backgroundColor: cleanColor,
+                    backgroundColor: globalColorClear,
                     child: IconButton(
-                        onPressed: () {
+                        onPressed: () async {
+                          var isFavorite =
+                              widget.property.isFavorite ? false : true;
+                          final SharedPreferences prefs =
+                              await SharedPreferences.getInstance();
+                          final favs = prefs.getStringList(favoriteProperties);
+
+                          if (favs?.isNotEmpty == true) {
+                            var f = favs!.firstWhere(
+                              (element) =>
+                                  element == widget.property.id.toString(),
+                              orElse: () => "",
+                            );
+                            if (isFavorite) {
+                              if (f.isEmpty) {
+                                favs.add(widget.property.id.toString());
+                              }
+                            } else {
+                              if (f.isNotEmpty) {
+                                favs.remove(widget.property.id.toString());
+                              }
+                            }
+                            prefs.setStringList(
+                              favoriteProperties,
+                              favs,
+                            );
+                          } else {
+                            if (isFavorite) {
+                              prefs.setStringList(
+                                favoriteProperties,
+                                <String>[widget.property.id.toString()],
+                              );
+                            }
+                          }
                           setState(() {
-                            widget.property.isFavorite =
-                                widget.property.isFavorite ? false : true;
+                            widget.property.isFavorite = isFavorite;
                           });
                         },
                         icon: Icon(
                             widget.property.isFavorite
                                 ? Icons.favorite
                                 : Icons.favorite_border,
-                            color: mainColor)),
+                            color: globalColorMain)),
                   )
                 ],
               ),
@@ -129,5 +167,34 @@ class _PropertyWidgetState extends State<PropertyWidget> {
       ),
       // ),
     );
+  }
+
+  Future<void> _setPreferedProp(Property property) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final favs = prefs.getStringList(favoriteProperties);
+
+    if (favs?.isEmpty == true) {
+      if (property.isFavorite) {
+        prefs.setStringList(
+          favoriteProperties,
+          <String>[property.id.toString()],
+        );
+      }
+    } else {
+      var f = favs!.firstWhere((element) => element == property.id.toString());
+      if (property.isFavorite) {
+        if (f.isEmpty) {
+          favs.add(property.id.toString());
+        }
+      } else {
+        if (f.isNotEmpty) {
+          favs.remove(property.id.toString());
+        }
+      }
+      prefs.setStringList(
+        favoriteProperties,
+        <String>[property.id.toString()],
+      );
+    }
   }
 }
