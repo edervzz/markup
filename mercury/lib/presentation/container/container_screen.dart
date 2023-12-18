@@ -5,7 +5,6 @@ import 'package:mercury/domain/entities/_entities.dart';
 import 'package:mercury/presentation/views/favorites/favorites_view.dart';
 import 'package:mercury/presentation/views/home/home_view.dart';
 import 'package:mercury/presentation/views/search/search_view.dart';
-import 'package:mercury/presentation/widgets/_widgets.dart';
 
 class ContainerScreen extends StatefulWidget {
   static String name = 'home-screen';

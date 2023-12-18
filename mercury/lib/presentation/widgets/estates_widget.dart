@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mercury/main.dart';
 import 'package:mercury/shared/constants.dart';
 
 class EstatesWidget extends StatefulWidget {
@@ -16,7 +15,7 @@ class _EstatesWidgetState extends State<EstatesWidget> {
     return Stack(
       alignment: Alignment.center,
       children: [
-        Container(
+        SizedBox(
           height: 250,
           child: Image.network(
             "https://static.wixstatic.com/media/087ce3_76f7e79239384c5db22390fd5662d1ee~mv2.jpg/v1/fill/w_1729,h_815,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/087ce3_76f7e79239384c5db22390fd5662d1ee~mv2.jpg",
