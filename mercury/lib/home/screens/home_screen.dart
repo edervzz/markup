@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:mercury/home/views/_views.dart';
 import 'package:mercury/shared/constants.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mercury/domain/entities/_entities.dart';
-import 'package:mercury/presentation/views/favorites/favorites_view.dart';
-import 'package:mercury/presentation/views/home/home_view.dart';
-import 'package:mercury/presentation/views/search/search_view.dart';
 
-class ContainerScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   static String name = 'home-screen';
 
-  const ContainerScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
-  State<ContainerScreen> createState() => _ContainerScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _ContainerScreenState extends State<ContainerScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   int screenIndex = 0;
 
   List<Widget> screens = List.empty(growable: true);

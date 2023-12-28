@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mercury/presentation/widgets/_widgets.dart';
+import 'package:mercury/home/widgets/_widgets.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});

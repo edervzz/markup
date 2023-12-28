@@ -1,18 +1,19 @@
 import 'package:flutter/widgets.dart';
 import 'package:mercury/domain/entities/_entities.dart';
-import 'package:mercury/presentation/widgets/_widgets.dart';
+import 'package:mercury/home/widgets/_widgets.dart';
 
-class PropertiesWidget extends StatefulWidget {
+class PropertyListWidget extends StatefulWidget {
   final List<Property>? properties;
   final PriceFor? priceFor;
 
-  const PropertiesWidget({super.key, required this.properties, this.priceFor});
+  const PropertyListWidget(
+      {super.key, required this.properties, this.priceFor});
 
   @override
-  State<StatefulWidget> createState() => PropertiesWidgetState();
+  State<StatefulWidget> createState() => PropertyListWidgetState();
 }
 
-class PropertiesWidgetState extends State<PropertiesWidget> {
+class PropertyListWidgetState extends State<PropertyListWidget> {
   @override
   Widget build(BuildContext context) {
     List<Widget> props = List.empty(growable: true);
@@ -29,7 +30,7 @@ class PropertiesWidgetState extends State<PropertiesWidget> {
     }
 
     return Column(
-      children: [...props],
+      children: props,
     );
   }
 }
