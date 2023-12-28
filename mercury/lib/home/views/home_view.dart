@@ -19,46 +19,44 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider(
-        create: (context) => HomeBloc(dataStore!),
-        child: BlocBuilder<HomeBloc, HomeState>(
-          builder: (context, homeState) {
-            switch (homeState.state) {
-              case HomeStates.loading:
-                BlocProvider.of<HomeBloc>(context).add(HomeLoadEvent());
-                return const Center(child: CircularProgressIndicator());
-              case HomeStates.ready:
-              default:
-            }
-            return Center(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    const EstatesWidget(),
-                    Subheader(
-                        text1: AppLocalizations.of(context)!.newEstates,
-                        text2: AppLocalizations.of(context)!.onSale),
-                    _properties(homeState.properties, PriceFor.forBuy),
-                    TextButton(
-                      onPressed: () {},
-                      child: _seeMore(),
-                    ),
-                    Subheader(
-                        text1: AppLocalizations.of(context)!.newEstates,
-                        text2: AppLocalizations.of(context)!.onRent),
-                    _properties(homeState.properties, PriceFor.forRent),
-                    TextButton(
-                      onPressed: () {},
-                      child: _seeMore(),
-                    ),
-                    const ContactWidget(),
-                  ],
-                ),
+    return BlocProvider(
+      create: (context) => HomeBloc(dataStore!),
+      child: BlocBuilder<HomeBloc, HomeState>(
+        builder: (context, homeState) {
+          switch (homeState.state) {
+            case HomeStates.loading:
+              BlocProvider.of<HomeBloc>(context).add(HomeLoadEvent());
+              return const Center(child: CircularProgressIndicator());
+            case HomeStates.ready:
+            default:
+          }
+          return Center(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const EstatesWidget(),
+                  Subheader(
+                      text1: AppLocalizations.of(context)!.newEstates,
+                      text2: AppLocalizations.of(context)!.onSale),
+                  _properties(homeState.properties, PriceFor.forBuy),
+                  TextButton(
+                    onPressed: () {},
+                    child: _seeMore(),
+                  ),
+                  Subheader(
+                      text1: AppLocalizations.of(context)!.newEstates,
+                      text2: AppLocalizations.of(context)!.onRent),
+                  _properties(homeState.properties, PriceFor.forRent),
+                  TextButton(
+                    onPressed: () {},
+                    child: _seeMore(),
+                  ),
+                  const ContactWidget(),
+                ],
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }
