@@ -66,7 +66,7 @@ class _HomeViewState extends State<HomeView> {
   Widget _properties(List<Property>? properties, PriceFor priceFor) {
     List<Widget> props = List.empty(growable: true);
     if (properties != null) {
-      for (var element in properties!) {
+      for (var element in properties) {
         if (element.priceFor == priceFor) {
           props.add(PropertyWidget(property: element));
         }

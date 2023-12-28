@@ -48,7 +48,7 @@ class _FavoriteViewState extends State<FavoriteView> {
   Widget _prepareList(List<Property>? properties) {
     List<Widget> props = List.empty(growable: true);
     if (properties != null) {
-      for (var element in properties!) {
+      for (var element in properties) {
         props.add(FavItemWidget(property: element));
       }
     }
