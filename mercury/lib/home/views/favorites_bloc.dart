@@ -15,6 +15,25 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
       emit(FavoritesState.ready(properties: data ?? List.empty()));
     });
 
+    on<FavoriteRemoveItemEvent>(
+      (event, emit) async {
+        final SharedPreferences prefs = await SharedPreferences.getInstance();
+        final favs = prefs.getStringList(favoriteProperties);
+
+        if (favs?.isNotEmpty == true) {
+          var f = favs!.firstWhere(
+            (element) => element == event.property.id.toString(),
+            orElse: () => "",
+          );
+          favs.remove(event.property.id.toString());
+          prefs.setStringList(
+            favoriteProperties,
+            favs,
+          );
+        }
+      },
+    );
+
     on<FavoritesSaveItemEvent>((event, emit) async {
       var isFavorite = event.property.isFavorite ? false : true;
       final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -68,6 +87,12 @@ class FavoritesSaveItemEvent extends FavoritesEvent {
   final Property property;
 
   const FavoritesSaveItemEvent(this.property);
+}
+
+class FavoriteRemoveItemEvent extends FavoritesEvent {
+  final Property property;
+
+  const FavoriteRemoveItemEvent(this.property);
 }
 
 // ****************************************************************

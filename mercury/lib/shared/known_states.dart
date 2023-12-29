@@ -3,4 +3,5 @@ enum KnownState {
   loading,
   ready,
   done,
+  noPaint,
 }

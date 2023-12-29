@@ -31,7 +31,10 @@ class _PropertyWidgetState extends State<PropertyWidget> {
           Stack(
             alignment: AlignmentDirectional.bottomStart,
             children: [
-              image(widget.property.imageUrl),
+              // Image.network(
+              //   widget.property.imageUrl,
+              //   fit: BoxFit.cover,
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -175,9 +178,9 @@ class _PropertyWidgetState extends State<PropertyWidget> {
       w = Image.network(
         widget.property.imageUrl,
         fit: BoxFit.cover,
-        errorBuilder: (context, error, stackTrace) {
-          return Image.asset("assets/images/background.jpg");
-        },
+        // errorBuilder: (context, error, stackTrace) {
+        //   return Image.asset("assets/images/background.jpg");
+        // },
       );
     } catch (e) {
       w = Image.asset("assets/images/background.jpg");

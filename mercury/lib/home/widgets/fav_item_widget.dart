@@ -125,6 +125,7 @@ class _FavItemWidgetState extends State<FavItemWidget> {
               ),
             ],
           ),
+          const Padding(padding: EdgeInsets.only(bottom: 2))
         ],
       ),
       // ),

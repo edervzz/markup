@@ -4,7 +4,7 @@ import 'package:mercury/domain/repository/property_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PropertyAdapterStub implements PropertyRepository {
-  List<Property> store;
+  final List<Property> store;
 
   PropertyAdapterStub()
       : store = <Property>[
@@ -80,12 +80,11 @@ class PropertyAdapterStub implements PropertyRepository {
   Future<List<Property>?> readFavorites() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final favs = prefs.getStringList(favoriteProperties);
-    if (favs?.isEmpty == true) {
+    if (favs == null || favs.isEmpty == true) {
       return null;
     }
-    var favoriteProps = store
-        .where((element) => favs!.contains(element.id.toString()))
-        .toList();
+    var favoriteProps =
+        store.where((element) => favs.contains(element.id.toString())).toList();
 
     return favoriteProps;
   }

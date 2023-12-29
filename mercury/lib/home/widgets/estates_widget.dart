@@ -18,7 +18,7 @@ class _EstatesWidgetState extends State<EstatesWidget> {
         SizedBox(
           height: 250,
           child: Image.network(
-            "https://static.wixstatic.com/media/087ce3_76f7e79239384c5db22390fd5662d1ee~mv2.jpg/v1/fill/w_1729,h_815,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/087ce3_76f7e79239384c5db22390fd5662d1ee~mv2.jpg",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/330993383.jpg?k=931a8b3286d533d1bb984218304d85029f464ab79e0bb25083e25d6fe1d8b340&o=&hp=1",
             fit: BoxFit.cover,
           ),
         ),
